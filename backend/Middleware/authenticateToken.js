@@ -8,6 +8,7 @@ const authenticateToken = (req, res, next) => {
   if (!token) {
     return res.status(401).json({ message: "Access token is missing" });
   }
+  // hihi
 
   jwt.verify(token, secretKey, (err, user) => {
     if (err) {
